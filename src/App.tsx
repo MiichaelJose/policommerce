@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="text-slate-800 antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
       {/* Navbar */}
-      <header className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm transition-all duration-300">
+      <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-200 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -39,7 +39,7 @@ function App() {
               <a href="#inicio" className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Para Revendedores</a>
               <a href="#produtos" className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Produtos</a>
               <a href="#vantagens" className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Como Funciona</a>
-              <a href="#depoimentos" className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Avaliações</a>
+              {/* <a href="#depoimentos" className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Avaliações</a> */}
               <a href="#seja-revendedor" className="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Contato</a>
             </nav>
 
