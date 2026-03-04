@@ -28,7 +28,7 @@ function App() {
               {/* <div className="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center text-white shadow-md">
                 <Package className="w-6 h-6" />
               </div> */}
-              <img src="/logo.png" alt=""  className=" w-25 h-20 rounded-lg flex "/>
+              <img src="/logo.png" alt="PoliCommerce" className="h-12 md:h-16 w-auto object-contain" />
               {/* <span className="font-bold text-2xl tracking-tight text-brand-900">
                 Poli<span className="text-brand-600">Commerce</span>
               </span> */}
@@ -102,12 +102,12 @@ function App() {
                   Fornecemos canecas, potes e vasos com pronta entrega e condições comerciais pensadas para revenda.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="#produtos" className="inline-flex justify-center items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-8 py-3.5 rounded-full text-base font-semibold transition-all shadow-lg shadow-brand-500/30 whitespace-nowrap">
+                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center w-full">
+                  <a href="#produtos" className="inline-flex justify-center items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3.5 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold transition-all shadow-lg shadow-brand-500/30 sm:whitespace-nowrap text-center">
                     Quero ver os produtos para revenda
-                    <ArrowDown className="w-5 h-5 flex-shrink-0" />
+                    <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   </a>
-                  <a href="#vantagens" className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 px-8 py-3.5 rounded-full text-base font-medium transition-all shadow-sm whitespace-nowrap">
+                  <a href="#vantagens" className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 px-5 py-2 sm:px-8 sm:py-3.5 rounded-full text-xs sm:text-base font-medium transition-all shadow-sm sm:whitespace-nowrap text-center">
                     Como funciona a revenda
                   </a>
                 </div>
@@ -447,7 +447,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-4">
-                <img src="/logo.png" alt="PoliCommerce" className="w-25 h-16 rounded-lg object-contain" />
+                <img src="/logo.png" alt="PoliCommerce" className="h-12 md:h-16 w-auto object-contain" />
               </div>
               <p className="text-sm leading-relaxed mb-4">
                 Especialistas na fabricação e distribuição atacadista de utilidades plásticas duráveis, rentáveis e seguras.
