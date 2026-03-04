@@ -28,7 +28,7 @@ function App() {
               {/* <div className="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center text-white shadow-md">
                 <Package className="w-6 h-6" />
               </div> */}
-              <img src="../public/logo.png" alt=""  className=" w-25 h-20 rounded-lg flex "/>
+              <img src="/logo.png" alt=""  className=" w-25 h-20 rounded-lg flex "/>
               {/* <span className="font-bold text-2xl tracking-tight text-brand-900">
                 Poli<span className="text-brand-600">Commerce</span>
               </span> */}
@@ -447,7 +447,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-4">
-                <img src="../public/logo.png" alt="PoliCommerce" className="w-25 h-16 rounded-lg object-contain" />
+                <img src="/logo.png" alt="PoliCommerce" className="w-25 h-16 rounded-lg object-contain" />
               </div>
               <p className="text-sm leading-relaxed mb-4">
                 Especialistas na fabricação e distribuição atacadista de utilidades plásticas duráveis, rentáveis e seguras.
