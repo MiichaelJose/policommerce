@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { 
   ArrowRight, Menu, TrendingUp, ArrowDown, CheckCircle2,
   PackageCheck, BadgePercent, Truck,
-  Headset, Quote, Check, MapPin, Mail, Building2, Instagram,
-  MessageCircle, Star
+  Headset, Check, MapPin, Mail, Building2, Instagram,
+  MessageCircle, Star, X
 } from 'lucide-react';
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
 
             {/* Mobile Menu Button */}
             <button onClick={handleMobileMenuToggle} className="md:hidden p-2 text-slate-600 hover:text-brand-600 focus:outline-none">
-              <Menu className="w-6 h-6" />
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -78,8 +78,8 @@ function App() {
           <div className="hidden lg:block absolute top-0 right-0 bottom-0 w-[50%] z-0">
             <div className="w-full h-full overflow-hidden lg:[clip-path:polygon(15%_0,100%_0,100%_100%,0_100%)]">
               <img 
-                src="https://images.unsplash.com/photo-1586528116311-ad8ed3c84a0c?auto=format&fit=crop&q=80&w=1200" 
-                alt="Centro de Distribuição PoliCommerce" 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
+                alt="Negócio Digital PoliCommerce" 
                 className="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-105"
               />
               <div className="absolute inset-0 bg-brand-900/10 pointer-events-none"></div>
@@ -127,8 +127,8 @@ function App() {
               {/* Mobile Image (Visible only on small screens) */}
               <div className="lg:hidden relative w-full h-[350px] sm:h-[450px] rounded-[2rem] overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1586528116311-ad8ed3c84a0c?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Centro de Distribuição PoliCommerce" 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
+                  alt="Negócio Digital PoliCommerce" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -252,8 +252,8 @@ function App() {
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Linhas de produtos para revenda</h2>
                 <p className="text-lg text-slate-600">Produtos de necessidade diária, com giro constante no varejo e recompra frequente. Principais categorias organizadas em kits prontos para revenda.</p>
               </div>
-              <a href="#seja-revendedor" className="inline-flex items-center justify-center gap-2 bg-brand-100/50 hover:bg-brand-100 text-brand-700 px-6 py-3 rounded-lg font-semibold transition-colors border border-brand-200">
-                Acessar Tabela Atacado <ArrowRight className="w-4 h-4" />
+              <a href="https://wa.me/5519990047324?text=Ol%C3%A1%21%20Gostaria%20de%20ver%20o%20cat%C3%A1logo%20de%20produtos." target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-brand-100/50 hover:bg-brand-100 text-brand-700 px-6 py-3 rounded-lg font-semibold transition-colors border border-brand-200">
+                Ver Catálogo <ArrowRight className="w-4 h-4" />
               </a>
             </div>
 
@@ -265,7 +265,7 @@ function App() {
                     <TrendingUp className="w-3.5 h-3.5 text-slate-500" />
                     Produto bem avaliado
                   </div>
-                  <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800" alt="Vasos" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src="/products/vasos-gem.png" alt="Vasos" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center justify-between mb-3">
@@ -290,11 +290,11 @@ function App() {
               {/* Card 2 - Potes */}
               <div className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
                 <div className="h-64 bg-slate-100 border-b border-slate-100 overflow-hidden relative">
-                  <div className="absolute top-4 left-4 z-10 bg-accent-50/95 backdrop-blur-sm text-accent-800 border border-accent-200 text-xs font-bold px-3 py-1.5 rounded-md shadow-sm flex items-center gap-1.5">
+                  <div className="absolute top-4 left-4 z-10 bg-white/95  backdrop-blur-sm text-accent-800 border border-accent-200 text-xs font-bold px-3 py-1.5 rounded-md shadow-sm flex items-center gap-1.5">
                     <PackageCheck className="w-3.5 h-3.5 text-accent-600" />
                     Alta saída
                   </div>
-                  <img src="https://images.unsplash.com/photo-1596162954151-cdcb4c0f70a8?auto=format&fit=crop&q=80&w=800" alt="Potes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src="/products/pote-gem.png" alt="Potes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center justify-between mb-3">
@@ -323,17 +323,17 @@ function App() {
                     <Truck className="w-3.5 h-3.5 text-slate-500" />
                     Produto recorrente
                   </div>
-                  <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&q=80&w=800" alt="Canecas" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src="/products/pratos-copos-gem.png" alt="Canecas e Pratos" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">Institucional</span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">UTILIDADES</span>
                     <div className="flex items-center gap-1 text-sm font-medium text-slate-700">
                       <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
                       <span>4,8</span>
                     </div>
                   </div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">Canecas Escolares</h4>
+                  <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">Canecas e Pratos</h4>
                   <p className="text-sm text-slate-600 mb-4">Plástico resistente, ideal para creches, merendas e personalização.</p>
                   
                   <div className="mt-auto pt-4 border-t border-slate-100">
@@ -357,7 +357,7 @@ function App() {
         </section>
 
         {/* Testimonial Section */}
-        <section id="depoimentos" className="py-20 bg-brand-50 border-y border-brand-100">
+        {/* <section id="depoimentos" className="py-20 bg-brand-50 border-y border-brand-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Quote className="w-12 h-12 text-brand-300 mx-auto mb-6" />
             <h3 className="text-2xl md:text-3xl font-medium text-slate-800 mb-8 leading-relaxed">
@@ -373,7 +373,7 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* WhatsApp Conversion Section */}
         <section id="seja-revendedor" className="py-24 bg-slate-900 border-t border-slate-800 relative overflow-hidden">
@@ -422,7 +422,7 @@ function App() {
             {/* Main CTA */}
             <div className="flex flex-col items-center gap-4">
               <a 
-                href="https://wa.me/numerodowhatsapp" 
+                href="https://wa.me/5519990047324?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20consultor%20de%20vendas." 
                 target="_blank" 
                 rel="noreferrer"
                 className="inline-flex justify-center items-center gap-3 bg-[#25D366] hover:bg-[#20BE5A] text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-green-900/40 w-full sm:w-auto"
@@ -453,7 +453,7 @@ function App() {
                 Especialistas na fabricação e distribuição atacadista de utilidades plásticas duráveis, rentáveis e seguras.
               </p>
               <div className="flex gap-4">
-                <a href="https://www.instagram.com/policommerce_" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                <a href="https://www.instagram.com/policommerce_/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
                   <Instagram className="w-5 h-5" />
                   <span className="sr-only">Instagram</span>
                 </a>
@@ -466,11 +466,11 @@ function App() {
                 <ul className="space-y-3 text-sm inline-block">
                   <li className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 mt-0.5 text-brand-500 flex-shrink-0" />
-                    <span>Sede Administrativa e Logística<br />Itajaí - SC, Brasil</span>
+                    <span>Rua Norma desanti saragiotto, 30<br />Jardim Marajoara, Pedreira SP<br />13920-000, Brasil</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Mail className="w-4 h-4 text-brand-500 flex-shrink-0" />
-                    <span>atacado@policommerce.com.br</span>
+                    <span>policommercecontato@gmail.com</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Building2 className="w-4 h-4 text-brand-500 flex-shrink-0" />
