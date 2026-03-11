@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { 
   ArrowRight, Menu, TrendingUp, ArrowDown, CheckCircle2,
   PackageCheck, BadgePercent, Truck,
-  Headset, Check, MapPin, Mail, Building2, Instagram,
-  MessageCircle, Star, X
+  Headset, Check, Building2, 
+  MessageCircle, Star, X, Github
 } from 'lucide-react';
 
 function App() {
@@ -22,13 +22,13 @@ function App() {
       {/* Navbar */}
       <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-200 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-24">
             {/* Logo */}
             <div className="flex items-center gap-2">
               {/* <div className="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center text-white shadow-md">
                 <Package className="w-6 h-6" />
               </div> */}
-              <img src="/logo.png" alt="PoliCommerce" className="h-12 md:h-16 w-auto object-contain" />
+              <img src="/logo.svg" alt="PoliCommerce" className="h-20 md:h-24 w-auto object-contain" />
               {/* <span className="font-bold text-2xl tracking-tight text-brand-900">
                 Poli<span className="text-brand-600">Commerce</span>
               </span> */}
@@ -144,7 +144,7 @@ function App() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-orange-400 font-semibold tracking-widest uppercase text-sm mb-3">Por que escolher a PoliCommerce?</h2>
+              <h2 className="text-accent-500 font-semibold tracking-widest uppercase text-sm mb-3">Por que escolher a PoliCommerce?</h2>
               <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-6">Vantagens reais para quem vive de revenda</h3>
               <p className="text-lg text-brand-100/90 leading-relaxed">Eliminamos intermediários para que você compre direto da fonte com segurança, rapidez e qualidade superior.</p>
             </div>
@@ -442,60 +442,70 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+      <footer className="bg-white text-slate-700 py-16 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="md:col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <img src="/logo.png" alt="PoliCommerce" className="h-12 md:h-16 w-auto object-contain" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-16">
+            {/* Left Column: Main Info Section */}
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-2">
+                <img src="/logo.svg" alt="Policommerce" className="h-16 md:h-16 w-auto object-contain" />
               </div>
-              <p className="text-sm leading-relaxed mb-4">
-                Especialistas na fabricação e distribuição atacadista de utilidades plásticas duráveis, rentáveis e seguras.
-              </p>
-              <div className="flex gap-4">
-                <a href="https://www.instagram.com/policommerce_/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
-                  <Instagram className="w-5 h-5" />
-                  <span className="sr-only">Instagram</span>
-                </a>
-              </div>
-            </div>
-            
-            <div className="md:col-span-1 flex flex-col md:items-center text-left">
-              <div>
-                <h4 className="text-white font-semibold mb-4 text-left md:text-center">Contato Oficial</h4>
-                <ul className="space-y-3 text-sm inline-block">
-                  <li className="flex items-start gap-3">
-                    <MapPin className="w-4 h-4 mt-0.5 text-brand-500 flex-shrink-0" />
-                    <span>Rua Norma desanti saragiotto, 30<br />Jardim Marajoara, Pedreira SP<br />13920-000, Brasil</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Mail className="w-4 h-4 text-brand-500 flex-shrink-0" />
-                    <span>policommercecontato@gmail.com</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Building2 className="w-4 h-4 text-brand-500 flex-shrink-0" />
-                    <span>CNPJ: 43.437.161/0002-30</span>
-                  </li>
-                </ul>
+              <div className="max-w-md">
+                <p className="text-base text-slate-600 leading-relaxed mb-8 font-medium">
+                  Especialistas na fabricação e distribuição atacadista de utilidades plásticas duráveis, rentáveis e seguras.
+                </p>
+                <div className="flex flex-col gap-1">
+                  <p className="font-bold text-slate-900">POLICOMMERCE COMERCIAL LTDA</p>
+                  <p className="text-slate-500 text-sm">43.437.161/0002-30</p>
+                </div>
               </div>
             </div>
 
-            <div className="md:col-span-1 md:flex md:flex-col md:items-end text-left">
+            {/* Right Column: Links and Contact */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 pt-12 lg:pt-0 border-t border-slate-100 lg:border-t-0">
               <div>
-                <h4 className="text-white font-semibold mb-4">Links Rápidos</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="#inicio" className="hover:text-brand-400 transition-colors">Início</a></li>
-                  <li><a href="#vantagens" className="hover:text-brand-400 transition-colors">Vantagens</a></li>
-                  <li><a href="#produtos" className="hover:text-brand-400 transition-colors">Catálogo</a></li>
-                  <li><a href="#seja-revendedor" className="hover:text-brand-400 transition-colors">Seja Revendedor</a></li>
+                <h4 className="font-bold text-slate-900 mb-6">Navegação</h4>
+                <ul className="space-y-4 text-sm font-medium">
+                  <li><a href="#inicio" className="text-slate-500 hover:text-brand-600 transition-colors">Para Revendedores</a></li>
+                  <li><a href="#produtos" className="text-slate-500 hover:text-brand-600 transition-colors">Produtos</a></li>
+                  <li><a href="#vantagens" className="text-slate-500 hover:text-brand-600 transition-colors">Como Funciona</a></li>
+                  <li><a href="#seja-revendedor" className="text-slate-500 hover:text-brand-600 transition-colors">Contato</a></li>
                 </ul>
               </div>
+
+              {/* <div>
+                <h4 className="font-bold text-slate-900 mb-6">Contato</h4>
+                <ul className="space-y-6 text-sm">
+                  <li className="flex flex-col gap-1">
+                    <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Telefone / WhatsApp</span>
+                    <a href="tel:+5519990047324" className="text-lg font-extrabold text-slate-900 hover:text-brand-600 transition-colors">+55 19 99004 7324</a>
+                  </li>
+                  <li className="flex flex-col gap-1">
+                    <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">E-mail</span>
+                    <a href="mailto:policommercecontato@gmail.com" className="font-bold text-slate-900 hover:text-brand-600 transition-colors">policommercecontato@gmail.com</a>
+                  </li>
+                  <li className="flex gap-4 pt-2">
+                    <a href="https://www.instagram.com/policommerce_/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                  </li>
+                </ul>
+              </div> */}
             </div>
           </div>
-          
-          <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <p>&copy; 2026 PoliCommerce Comercial Ltda. Todos os direitos reservados.</p>
-            <p>Desenvolvido para Lojistas Brasileiros.</p>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-center md:text-left">
+            <p className="text-slate-500">
+              &copy; 2025 Policommerce Comercial Ltda – Todos os direitos reservados
+            </p>
+            <div className="flex items-center gap-2">
+              <span className="text-slate-400">Desenvolvido por</span>
+              <a href="https://github.com/MiichaelJose" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                <Github className="w-4 h-4" />
+                <span>@MiichaelJose</span>
+              </a>
+            </div>
           </div>
         </div>
       </footer>
